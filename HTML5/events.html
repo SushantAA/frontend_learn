@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        html{
+            background-color: darkslategray;
+            scale: 1;
+        }
+
+        #big{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #small{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <input type="button" value="count" onclick="countB()" id="bbut" >
+
+    <div id="big" data-lowercase="ll" >
+        <div id="small" data-uppercase="dd">
+
+        </div>
+    </div>
+    
+    <script>
+        let c = 0;
+        function countB(){
+            c = c+1;
+            alert(c);
+        }
+
+        let bbut = document.getElementById('bbut');
+        bbut.onmouseenter = function(){
+            bbut.style.scale = "2";
+        }
+
+        bbut.onmouseleave =  function(){
+            bbut.style.scale = "1";
+        }
+
+        let big = document.getElementById('big');
+        let small = document.getElementById('small');
+
+        const clickme = (str) => {
+            console.log(str);
+        }
+
+        big.addEventListener('click', () => {console.log('big'); console.log(event);}, false);
+        small.addEventListener('click', () => {console.log('small'); console.log(event);  }, false);
+
+    </script>
+
+</body>
+</html>
