@@ -1,0 +1,33 @@
+.box{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 2rem;
+    background-color: blueviolet;
+    margin: 1rem;
+    text-align: center;
+    color: aliceblue;
+    font-size: 5rem;
+    opacity: 0.5;
+}
+
+.box.relative{
+    position: relative;
+    white-space: nowrap;overflow: auto;
+}
+
+.box.absolute{
+    position: absolute;
+}
+
+.box.fixed{
+    position: fixed;
+}
+
+.box.sticky{
+    position: sticky;
+    top: 0rem;
+}
+
+.box.static{
+    position: static;
+}
